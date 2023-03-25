@@ -14,7 +14,7 @@ const CourseContent = ({topicNumber}) => {
   useEffect(()=>{
     const current = topics.filter((topic)=>topic.id===topicNumber);
     setCurrentTopic(current)
-  },[topicNumber]);
+  },[topicNumber,topics]);
 
     //early return to prevent reading null error
     if(currentTopic===null) return null;
